@@ -1,0 +1,71 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#map {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+#ctrls {
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.modeSwitch {
+	margin: 10px;
+	padding: 10px;
+}
+
+.modeSwitch.active {
+	background-color: gray;
+}
+
+.night .leaflet-tile {
+	transition: all ease 0.5s;
+	-webkit-filter: invert(100%);
+	filter: invert(100%);
+}
+
+.cssMarker {
+	opacity: 0.8;
+	transition: all 0.3s;
+	border: 2px solid black;
+	border-radius: 50%;
+	width: 32px !important;
+	height: 32px !important;
+	margin-left: -16px !important;
+	margin-top: -16px !important;
+}
+
+.smallMarkers .cssMarker {
+	width: 12px !important;
+	height: 12px !important;
+	margin-left: -6px !important;
+	margin-top: -6px !important;
+}
+
+.green {
+	background-color: green;
+}
+.orange {
+	background-color: orange;
+}
+.red {
+	background-color: red;
+}
+
+.colorBlind .green {
+	background-color: #08f;
+}
+.colorBlind .orange {
+	background-color: yellow;
+}
+.colorBlind .red {
+	background-color: red;
+}

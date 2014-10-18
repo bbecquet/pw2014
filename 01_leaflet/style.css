@@ -1,0 +1,23 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#map {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+.marker {
+	width: 30px !important;
+	height: 30px !important;
+	background-color: green;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+.marker:hover {
+	border-radius: 0;
+}

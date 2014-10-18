@@ -1,0 +1,129 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "Pantonio",
+        "title": "",
+        "date": "2014/06/01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3642170429229736,
+          48.82179700320322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "Stew",
+        "title": "HÃ©ron bleutÃ©",
+        "address": "Place de VÃ©nÃ©tie",
+        "date": "2014/01/01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3645389080047607,
+          48.82117537617563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "Sainer",
+        "date": "2013/09/01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.360486090183258,
+          48.81712224959302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "Inti",
+        "date": "2012/11/01",
+        "address": "129 avenue d'Italie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3592951893806458,
+          48.82159744763971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "C215",
+        "title": "Chat",
+        "address": "141 boulevard Vincent Auriol ",
+        "date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.362586259841919,
+          48.83262655718913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "M-City",
+        "title": "",
+        "date": "2010/10/01",
+        "address": "122 boulevard de l'HÃ´pital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3573800921440125,
+          48.83475052092241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "ZED",
+        "title": "",
+        "date": "2011/08/01",
+        "address": "Rue Watt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3800313472747803,
+          48.82700459268395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "artist": "Vhils",
+        "title": "",
+        "address": "173 rue du ChÃ¢teau des Rentiers",
+        "date": "2012/06/01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3615723848342896,
+          48.830525457090495
+        ]
+      }
+    }
+  ]
+}

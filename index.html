@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Paris Web 2014 - Applis carto</title>
+
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="shower/themes/bright/styles/screen.css">
+    <style>
+      body {
+        font-size: 32px;
+      }
+      .slide {
+        background: url(rsrc/bg.jpg) no-repeat;
+        background-size: cover;
+      }
+      .slide h2 {
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+      }
+      .slide > div {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        padding: 60px 96px 0px 96px;
+        width: 832px;
+        height: 580px;
+      }
+
+      .slide:after {
+        right: 30px;
+        bottom: 30px;
+        left: auto;
+        font-size: 0.8em;
+        font-style: italic;
+        text-align: right;
+        line-height: 1;
+      }
+
+      .cover {
+        color: white;
+        text-shadow: 0 0 1px #fff;
+      }
+      .cover h1 {
+        font-weight: bold;
+        font-size: 45px;
+        
+        line-height: 1.6;
+      }
+      .slide h2 {
+        margin-bottom: 36px;
+      }
+      .slide h3 {
+        font-weight: bold;
+      }
+      .slide p {
+        margin-bottom: 24px;
+      }
+      .cover .meta {
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 30px;
+        margin-bottom: 0;
+      }
+      .meta img {
+        width: 32px;
+        position:relative !important;
+        vertical-align:middle;
+      }
+      .meta a {
+        background: none;
+      }
+      #pw {
+        left: 30px;
+      }
+      #author {
+        text-align: right;
+        right: 30px;
+        left: auto;
+      }
+      code {
+        font-size: 0.6em;
+      }
+    </style>
+  </head>
+
+  <body class="list">
+    <section class="slide cover">
+      <div>
+        <img src="rsrc/bg_scotland.jpg" style="position:absolute;top:0;left:0;z-index:-1"/>
+        <h1>Applications web cartographiques<br/>modernes et mobiles</h1>
+        <p id="pw" class="meta"><img style="margin-right:24px" src="rsrc/icon_pw_pink.png" />Atelier Paris Web 2014</p>
+        <p id="author" class="meta">Benjamin Becquet<a href="http://twitter.com/nimwendil"><img style="margin:0 12px 0 24px" src="rsrc/logo_twitter.png" /></a><a href="http://github.com/bbecquet"><img style="" src="rsrc/logo_github.png" /></a></p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Cartographie interactive et web</h2>
+        <ul>
+          <li class="next">< 2004 : préhistoire.</li>
+          <li class="next">2004 : Google Maps (<i>slippy map</i>). <span class="next">OpenStreetMap.</span></li>
+          <li class="next">2005 : Google Maps JavaScript API : <i>mash-ups</i>.</li>
+          <li class="next">2007 : smartphones : GPS, web mobile, applis et APIs.</li>
+          <li class="next">2012 : #switch2osm, cloud, nouveaux acteurs.<br/>
+            <span class="next">voir <a href="http://www.paris-web.fr/2012/conferences/les-nouveaux-horizons-de-la-cartographie-sur-le-web.php">conférence Paris Web 2012</a> :)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Applications cartographiques</h2>
+        <ul>
+          <li>Recherche de lieux,</li>
+          <li>Itinéraires,</li>
+          <li>Météo, transports, trafic automobile, etc.</li>
+        </ul>
+        <p>Support et/ou moyen d'accès à info géolocalisée</p>
+        <p>Modèle en couches : carte + <i>overlays</i></p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2><img src="rsrc/logo_leaflet.png" /></h2>
+        <p><a href="http://leafletjs.com/">http://leafletjs.com</a></p>
+        <ul>
+          <li>Réaction à la "IE6-isation" de Google Maps</li>
+          <li><b>Léger</b> (fonctions, taille, syntaxe)</li>
+          <li>Performant</li>
+          <li>Moderne (mobile, CSS, standards)</li>
+          <li>Version stable : 0.7.3 (<a href="https://www.youtube.com/watch?v=2H9g2DBIuLA">1.0 imminente</a>)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2><img src="rsrc/logo_leaflet.png" /></h2>
+        <ul>
+          <li><a href="http://www.openstreetmap.org">OpenStreetMap</a></li>
+          <li><a href="https://www.flickr.com/map">Flickr</a></li>
+          <li><a href="http://fr.mappy.com">Mappy</a></li>
+          <li><a href="http://uk.ign.com/maps/the-elder-scrolls-5-skyrim/skyrim">IGN</a> (non, pas ceux-là)</li>
+          <li><a href="http://mapbox.com"><b>Mapbox</b></a> (et donc Foursquare, GitHub, Pinterest, etc.)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>On a dit léger !</h2>
+        <div>
+          <h3>Google Maps</h3>
+          <p><i>Slippy map</i><span class="next"> + fonds de carte</span><span class="next">, géocodage</span><span class="next">, itinéraires</span><span class="next">, trafic</span><span class="next">, StreetView</span><span class="next">, météo</span><span class="next" style="font-size:0.9em">, POI</span><span class="next" style="font-size:0.8em">, transit</span><span class="next" style="font-size:0.7em">, AdSense</span><span class="next" style="font-size:0.6em">, Panoramio</span><span class="next" style="font-size:0.5em">, altitude</span><span class="next" style="font-size:0.4em">, etc.</span></p>
+        </div>
+        <div class="next">
+          <h3>Leaflet</h3>
+          <p><i>Slippy map</i></p>
+        </div>
+        <p class="next">Le reste ? Services tiers et <a href="http://leafletjs.com/plugins.html">plug-ins</a></p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Fonds de carte</h2>
+        <p>"Pyramide" de tuiles d'images X/Y/Z</p>
+        <img style="width:80%;display:block;margin:0 auto;" src="rsrc/tiles.png" />
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>15/16599/11282</h2>
+        <img src="rsrc/tile_google.png" width="192" />
+        <img src="rsrc/tile_osm.png" width="192" />
+        <img src="rsrc/tile_sat.png" width="192" />
+        <img src="rsrc/tile_toner.png" width="192" />
+        <img src="rsrc/tile_esri.png" width="192" />
+        <img src="rsrc/tile_hot.png" width="192" />
+        <img src="rsrc/tile_hydda.png" width="192" />
+        <img src="rsrc/tile_water.jpeg" width="192" />
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Fonds de carte : options</h2>
+        <ul>
+          <li>Liés à l'API Javascript (ex : Google, Bing)</li>
+          <li>Providers dédiés (ex : MapBox)</li>
+          <li>Serveurs ouverts (voir plugin <a href="http://leaflet-extras.github.io/leaflet-providers/preview/index.html">Leaflet Providers</a>)</li>
+          <li>Les générer et/ou les héberger soi-même</li>
+        </ul>
+        <p>Compromis apparence, coût, flexibilité, performance, fiabilité.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2><i>Overlays</i></h2>
+        <p>Tout le contenu géolocalisé</p>
+        <ul>
+          <li><b>Données ponctuelles (<i>markers</i>)</b></li>
+          <li>Données vectorielles (lignes, polygones, cercles)</li>
+        </ul>
+        <p>Rendu spécifié côté client</p>
+      </div>
+    </section>
+
+     <section class="slide">
+      <div>
+        <h2><i>Overlays</i> dans Leaflet</h2>
+        <ul>
+          <li>Modèle orienté objet</li>
+          <li><code>LayerGroup</code></li>
+          <li>Support natif du <a href="http://geojson.org/">GeoJSON</a></li>
+          <li>Back-end SVG ou Canvas (ou VML…)</li>
+          <li>Nombreux plug-ins : édition, formats, rendus complexes, labels, optimisation, animation, etc.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Géolocalisation</h2>
+        <ul>
+          <li>API déjà ancienne, <a href="http://caniuse.com/geolocation">bon support</a>
+            <code>navigator.geolocation.getCurrentPosition()</code> et <code>watchPosition()</code>
+          </li>
+          <li><a href="http://leafletjs.com/reference.html#map-locate">Wrapper Leaflet</a>, fonctions et événements dédiés</li>
+        </ul>
+        <p>Simple techniquement (mais autorisation requise)</p>
+        <p>Pertinence de l'usage ? (desktop vs. mobile)</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Sur mobile</h2>
+        <p>Contexte idéal (mobilité, géolocalisation), mais : </p>
+        <ul>
+          <li>Petits écrans vs. gros doigts</li>
+          <li>Interactions différentes : précision, pas de hover, etc.</li>
+          <li>Performances et réseau limités</li>
+          <li><b>"Concurrence" des applications natives</b></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Lâcher prise</h2>
+        <img src="https://api.tiles.mapbox.com/v4/examples.map-zr0njcqy/pin-l-star+482%282.3637,48.7887%29/2.3637,48.7887,16/350x120.png?access_token=pk.eyJ1IjoiYmJlY3F1ZXQiLCJhIjoieGZqTzZsZyJ9.boUXwiILkBMs4SGBwQ1vWQ" style="float:right;" class="next"/>
+        <ul>
+          <li>Réduire l'interactivité</li>
+          <li>Cartes statiques</li>
+          <li>Passer la main à l'application dédiée de l'OS
+            <ul class="next">
+              <li>Liens <code>geo:</code> : <a href="geo:48.7887,2.3637?z=15">geo:48.7887,2.3637?z=15</a></li>
+              <li>Templates d'url : <a href="http://maps.google.com/maps?saddr=48.8191,2.3196(Confs)&daddr=48.861133,2.349045(Beer)">http://maps.google.com/maps?saddr=48.8191,2.3196(Confs)&daddr=48.861133,2.349045(Beer)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Ou s'adapter !</h2>
+        <ul>
+          <li>UI : tailles et placement des contrôles, des <i>overlays</i></li>
+          <li>Au delà du RWD</li>
+          <li>Exploiter la géolocalisation</li>
+          <li><i>Single-page app</i> et problématiques associées</li>
+          <li>Performances critiques</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Performances</h2>
+        <ul>
+          <li>Techniques habituelles (CSS, Javascript, cache, etc.)</li>
+          <li>Fonds de carte critiques</li>
+          <li>Limiter manipulations du DOM et event listeners</li>
+          <li>Gérer les overlays par paquets</li>
+          <li>Limiter les interactions inutiles</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Tout vectoriel : le futur ?</h2>
+        <p>Nouveau paradigme</p>
+        <ul>
+          <li>Contrôle côté client
+            <ul>
+              <li>Données : requêtes, filtrage contextuel, l10n, etc.</li>
+              <li>Style : couleurs, typo, iconographie</li>
+            </ul>
+          </li>
+          <li>Zoom continu</li>
+          <li>3D, animations, etc.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Tout vectoriel : le présent</h2>
+        <ul>
+          <li>Fonctionnement de Google Maps depuis 2 ans</li>
+          <li>Juin 2014 : <a href="http://www.mapbox.com/mapbox-gl-js/">MapBox GL JS</a>
+            <ul>
+              <li>Tuiles vectorielles GeoJSON compressées</li>
+              <li>Langage de style</li>
+              <li>Rendu à la volée en WebGL sur <code>canvas</code></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>Tout vectoriel : pas si simple</h2>
+        <ul>
+          <li>Pas encore mature</li>
+          <li>Performances (quoique)</li>
+          <li>Protocoles et infrastructure complexe</li>
+          <li>Volume de données</li>
+          <li>Exposition des données, réticence des acteurs privés</li>
+          <li>Compétences cartographiques</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide shout">
+      <div>
+        <h2>Merci !</h2>
+      </div>
+    </section>  
+
+    <script src="shower/shower.min.js"></script>
+  </body>
+</html>

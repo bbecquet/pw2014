@@ -1,0 +1,36 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#map {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+#ctrls {
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#ctrls button {
+	display: block;
+	margin: 10px;
+}
+
+.autolib {
+	border: 2px solid black;
+	border-radius: 50%;
+}
+
+.autolib.station {
+	background-color: #48b9df;
+}
+
+.autolib.espace {
+	background-color: #ef509d;
+}

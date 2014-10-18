@@ -1,0 +1,30 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#map {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+.cssMarker {
+	background-color: gray;
+	color: gray;
+	transition: all 0.3s;
+	font-size: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.cssMarker:hover {
+	background-color: #ef509d;
+	color: #48b9df;
+	border-radius: 50%;
+	/* Ne fonctionne pas car transform est déjà utilisé par Leaflet pour le placement */
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
